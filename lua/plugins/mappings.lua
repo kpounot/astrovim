@@ -27,6 +27,9 @@ return {
           -- setting a mapping to false will disable it
           -- ["<esc>"] = false,
         },
+        i = {
+          ["<C-e>"] = { "<esc>A", desc = "Dismiss cmp and go to end of line" },
+        },
       },
     },
   },
