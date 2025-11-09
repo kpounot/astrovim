@@ -23,12 +23,19 @@ return {
           -- quick save
           -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
         },
+
         t = {
           -- setting a mapping to false will disable it
           -- ["<esc>"] = false,
         },
         i = {
           ["<C-e>"] = { "<esc>A", desc = "Dismiss cmp and go to end of line" },
+          ["<C-l>"] = {
+            function()
+              if require("luasnip").jumpable(1) then require("luasnip").jump(1) end
+            end,
+            desc = "LuaSnip jump next",
+          },
         },
       },
     },
